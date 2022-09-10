@@ -1,0 +1,102 @@
+
+.container{
+  height: 380px;
+  width: 1200px;
+  font-family: monospace;
+  font-size: 20px;
+  border-radius: 10px;
+  background: pink;
+  margin: auto;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center
+}
+
+.controls {
+  width: 100%;
+  height: 20%;
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-bottom;
+  line-height: 0
+}
+
+.display{
+  width: 20%;
+  height: 100%;
+  background: blue;
+  color: white;
+  border-radius: 5px;
+  font-size: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1em;
+  padding: 5px;
+}
+
+.slider {
+  width: 80px;
+  height: 20px;
+  background: black;
+  border-radius: 5px;
+  padding: 5%;
+  cursor: pointer
+}
+
+.slide-left {
+  width: 50%;
+  height: 100%;
+  float: left;
+  background: grey
+}
+
+.slide-right{
+  width: 50%;
+  height: 100%;
+  float: right;
+  background: LightGreen
+}
+.keyboard {
+  position: relative;
+  height: 250px;
+  justify-self: flex-end;
+  align-self: center
+}
+
+.black, .white {
+  display: inline-block;
+  border-style: solid;
+  border-radius: 5px;
+  cursor: pointer;
+  p {
+    position: absolute;
+    bottom: 0;
+    left: 25%
+  }
+}
+.black {
+  position: absolute;
+  width: 25px;
+  height: 170px;
+  border-color: black;
+  color: white;
+  background: black;
+  transform: translateX(-50%);
+  z-index: 1
+}
+
+.white{
+  width: 50px;
+  height: 250px;
+  background: white;
+  position: relative;
+}
+.game > *{
+  display: inline-block;
+  margin-left: 7px;
+  cursor: pointer
+}
