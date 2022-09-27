@@ -40,18 +40,27 @@ export default function Key(props) {
         }
     }
 
-    const keyClass = props.hint === props.noteId && props.gameActive? 'hint': 
-        props.notePlayed === props.noteId? 'active': '';
+    const background = props.hint === props.noteId && props.gameActive
+        ? 'bg-sky-300'
+        : props.notePlayed === props.noteId
+            ? 'bg-green-300'
+            : props.keyType === 'black'
+                ? 'bg-black'
+                : 'bg-white';
 
     return (
       <div
         id={props.noteId}
-        className={`${props.keyType} ${keyClass}`}
+        className={`group inline-block border-solid border-2 border-black hover:border-green-300 rounded-md cursor-pointer  
+        ${props.keyType === 'black'
+            ? 'absolute w-[25px] h-[170px] text-white translate-x-[-50%] z-10'
+            : 'relative w-[50px] h-[250px]'} 
+        ${background}`}
         onClick={playSound}>
         <audio
           id={props.keyCode}
           src={props.audioUrl}/>
-        <p>{props.keyTrigger}</p>
+        <p className="absolute bottom-0 left-1/2 translate-x-[-50%]">{props.keyTrigger}</p>
       </div>
     )
 }

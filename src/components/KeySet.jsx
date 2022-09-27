@@ -20,7 +20,7 @@ export default function KeySet(props) {
           />)
         })
     return (
-        <div className = 'keyboard'>
+        <div className = 'm-10 relative'>
           {keys}
         </div>
     )

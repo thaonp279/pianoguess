@@ -11,7 +11,7 @@ function App(props) {
   const [hint, setHint] = useState(props.songs[0].notes[0])
 
   return (
-    <div className='container'>
+    <div className='container min-w-[380px] text-lg rounded-xl flex-col p-10 bg-pink-200'>
       <Control
         songs={props.songs}
         sustain={sustain}

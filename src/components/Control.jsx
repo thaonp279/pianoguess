@@ -85,22 +85,24 @@ export default function Control(props) {
     }
 
     return (
-      <div className='controls'>
-        <div className='sustain'>
+      <div className='mt-5 flex justify-around items-end'>
+        <div>
           <p>Sustain</p>
-          <div className='slider'>
+          <div className='w-[80px] h-[30px] bg-black rounded-lg p-1 cursor-pointer'>
             <div 
               onClick={props.setSustain} 
-              className={props.sustain? 'slide-right': 'slide-left'}></div>
+              className={`w-[50%] h-[100%] ${props.sustain? 'bg-green-300 float-right': 'bg-gray-400 float-left'}`}></div>
           </div>
         </div>
-        <div className='display'><p>{display}</p></div>
-        <div className='game'>
-          <FontAwesomeIcon icon={faPlay} onClick={handlePlay}/>
-          <p onClick={handlePlay}>Guess a Song</p>
+        <div className='overflow-auto w-[30%] h-[80px] bg-blue-600 text-white text-sm xl:text-lg text-center rounded-md leading-5 p-5 align-middle'>
+        {display}
+        </div>
+        <div>
+          <FontAwesomeIcon className="inline-block ml-2 cursor-pointer" icon={faPlay} onClick={handlePlay}/>
+          <p className="inline-block ml-2 cursor-pointer" onClick={handlePlay}>Guess a Song</p>
           <br/>
           <form onSubmit={checkGuess}>
-          <input 
+          <input  className="inline-block ml-2 cursor-pointer"
             value={guess} 
             onClick={() => props.setKeydownActive(false)} 
             onChange={(event) => setGuess(event.target.value)}/>
