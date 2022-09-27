@@ -4,4 +4,4 @@ See it live: https://piano-guess.netlify.app/
 - option to sustain the key sound like a pedal on a piano
 - to play the song guessing game, play the tune by clicking on the highlighted keys on the keyboard then guess the names of the songs
 
-![Piano](https://user-images.githubusercontent.com/77321721/189485557-44527712-bb2e-4bd7-862e-9f80b30b0be5.png)
+<img width="1337" alt="Screen Shot 2022-09-27 at 10 26 16" src="https://user-images.githubusercontent.com/77321721/192424929-5b649172-9ad4-49ad-816c-f6d7cff4140a.png">
